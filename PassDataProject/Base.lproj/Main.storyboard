@@ -36,7 +36,6 @@
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="loginTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iz8-ub-FtU"/>
-                                    <segue destination="xLD-78-fxY" kind="show" id="EyN-gy-h3W"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="goB-R6-fpT">
@@ -78,6 +77,7 @@
                     <connections>
                         <outlet property="loginTF" destination="pSh-X0-ama" id="jMC-aj-ON9"/>
                         <outlet property="passwordTF" destination="uMR-hv-Gqt" id="jrQ-gN-sbV"/>
+                        <segue destination="xLD-78-fxY" kind="show" identifier="detailSague" id="TlL-xa-bvD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -92,11 +92,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OC6-pd-JhD">
-                                <rect key="frame" x="96.666666666666686" y="177" width="200" height="65"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OC6-pd-JhD">
+                                <rect key="frame" x="46.666666666666657" y="177" width="300" height="65"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="65" id="APl-Z1-ZIa"/>
-                                    <constraint firstAttribute="width" constant="200" id="Nbj-oz-MnD"/>
+                                    <constraint firstAttribute="width" constant="300" id="Nbj-oz-MnD"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="35"/>
                                 <color key="textColor" systemColor="systemBackgroundColor"/>
