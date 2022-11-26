@@ -34,6 +34,10 @@
                                 <buttonConfiguration key="configuration" style="plain" title="Login">
                                     <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="19"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="loginTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iz8-ub-FtU"/>
+                                    <segue destination="xLD-78-fxY" kind="show" id="EyN-gy-h3W"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="goB-R6-fpT">
                                 <rect key="frame" x="61.666666666666657" y="197" width="270" height="120"/>
@@ -52,7 +56,7 @@
                                             <constraint firstAttribute="height" constant="45" id="z84-rU-Tmm"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
                                 </subviews>
                                 <constraints>
@@ -71,25 +75,67 @@
                             <constraint firstItem="goB-R6-fpT" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="u9y-wj-SrL"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="loginTF" destination="pSh-X0-ama" id="jMC-aj-ON9"/>
+                        <outlet property="passwordTF" destination="uMR-hv-Gqt" id="jrQ-gN-sbV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="35.877862595419849" y="3.5211267605633805"/>
         </scene>
-        <!--View Controller-->
+        <!--Second View Controller-->
         <scene sceneID="GPc-ZB-MpQ">
             <objects>
-                <viewController id="xLD-78-fxY" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="xLD-78-fxY" customClass="SecondViewController" customModule="PassDataProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="u6L-4c-n4J">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OC6-pd-JhD">
+                                <rect key="frame" x="96.666666666666686" y="177" width="200" height="65"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="65" id="APl-Z1-ZIa"/>
+                                    <constraint firstAttribute="width" constant="200" id="Nbj-oz-MnD"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <color key="textColor" systemColor="systemBackgroundColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eU3-0A-kUy">
+                                <rect key="frame" x="137.66666666666666" y="352" width="118" height="55"/>
+                                <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="IVX-1o-AF3"/>
+                                    <constraint firstAttribute="width" constant="118" id="tB0-Ya-5Wu"/>
+                                </constraints>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Go Back">
+                                    <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="20"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="goBackTapped:" destination="xLD-78-fxY" eventType="touchUpInside" id="wHD-uE-T2e"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="2VN-da-R8H"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="OC6-pd-JhD" firstAttribute="top" secondItem="2VN-da-R8H" secondAttribute="top" constant="118" id="Ko2-Ce-03b"/>
+                            <constraint firstItem="eU3-0A-kUy" firstAttribute="centerX" secondItem="2VN-da-R8H" secondAttribute="centerX" id="cVN-kU-CFC"/>
+                            <constraint firstItem="OC6-pd-JhD" firstAttribute="centerX" secondItem="2VN-da-R8H" secondAttribute="centerX" id="caS-a0-TYC"/>
+                            <constraint firstItem="eU3-0A-kUy" firstAttribute="top" secondItem="OC6-pd-JhD" secondAttribute="bottom" constant="110" id="ylL-cz-Nac"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="67V-wf-rT5"/>
+                    <connections>
+                        <outlet property="label" destination="OC6-pd-JhD" id="QMC-gi-UNV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jUv-MS-aGR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="685" y="4"/>
+            <point key="canvasLocation" x="801" y="4"/>
         </scene>
     </scenes>
     <resources>
